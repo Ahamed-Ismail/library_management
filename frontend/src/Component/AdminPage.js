@@ -36,7 +36,7 @@ function AdminPage() {
 
 
   const handleSearch = async () => {
-    const res = await axios.get("http://localhost:8000/db/getData");
+    const res = await axios.get("http://44.212.5.79:8000/db/getData");
     const d = res.data;
     console.log(d);
     // await setDetails(d.data);
@@ -69,7 +69,7 @@ function AdminPage() {
 
   const handleAdd = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/db/addData", {
+      const res = await axios.post("http://44.212.5.79:8000/db/addData", {
         booktitle,
         authorname,
         subject,
@@ -103,7 +103,7 @@ function AdminPage() {
   const handleDelete = async (index) => {
     try {
       const element = details[index];
-      await axios.delete("http://localhost:8000/db/deleteData", {
+      await axios.delete("http://44.212.5.79:8000/db/deleteData", {
         data: { booktitle: element.booktitle },
       });
       const updatedDetails = details.filter((ele, i) => i !== index);
