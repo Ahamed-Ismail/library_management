@@ -6,10 +6,11 @@ dotenv.config();
 var con = null;
 try {
     con = mysql.createPool({
+        host: "librarydb.cu4aa78nopao.us-east-1.rds.amazonaws.com",
         port: 3306,
-        user: 'root',
+        user: "root",
         password: "5252864Mi",
-        database: 'library_db',
+        database: "library_db",
     }).promise();
     console.log('db connected');
 }
