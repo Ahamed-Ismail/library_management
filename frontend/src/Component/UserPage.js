@@ -18,7 +18,7 @@ function UserPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/db/getData");
+        const res = await axios.get("http://44.212.5.79:8000/db/getData");
         const d = res.data;
         setDetails(d.data);
       } catch (error) {
@@ -78,7 +78,7 @@ function UserPage() {
   // }
 
   const handleSearch = async () => {
-    const res = await axios.get("http://localhost:8000/db/getData");
+    const res = await axios.get("http://44.212.5.79:8000/db/getData");
     const d = res.data;
     console.log(d);
     // await setDetails(d.data);

@@ -17,12 +17,12 @@ function App() {
     try {
       var res = null;
       if (isUser) {
-        res = await axios.post("http://localhost:8000/auth/userlogin", {
+        res = await axios.post("http://44.212.5.79:8000/auth/userlogin", {
           username,
           password,
         });
       } else {
-        res = await axios.post("http://localhost:8000/auth/adminlogin", {
+        res = await axios.post("http://44.212.5.79:8000/auth/adminlogin", {
           username,
           password,
         });
@@ -47,7 +47,7 @@ function App() {
 
   const handleSignup = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/auth/signup", {
+      const res = await axios.post("http://44.212.5.79:8000//auth/signup", {
         username,
         password,
       });
